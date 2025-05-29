@@ -1,4 +1,4 @@
-class Currency {
+export default class Currency {
   constructor(code, name) {
     // Type validation
     if (typeof code !== 'string') {
