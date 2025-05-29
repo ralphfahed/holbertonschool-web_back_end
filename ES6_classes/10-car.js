@@ -7,7 +7,7 @@ export default class Car {
 
   // Clone method
   cloneCar() {
-    const Constructor = this.constructor;  // ✅ Now Constructor is defined
+    const Constructor = this.constructor;
     return new Constructor(this._brand, this._motor, this._color);
   }
 }
