@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""This module contains a function `floor` that returns the floor of a float."""
+"""This module contains a function `floor` that return the floor of a float"""
 
 import math
 
