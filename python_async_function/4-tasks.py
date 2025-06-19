@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
-"""This module defines a coroutine that runs task_wait_random n times
+"""Module that runs task_wait_random concurrently n times
 and returns a list of delays in order of completion.
 """
 
 import asyncio
 from typing import List
-from 3-tasks import task_wait_random  # ✅ Make sure 3-tasks.py is in same folder
+from tasks3 import task_wait_random  # ✅ import from your previous task
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
-    """Runs task_wait_random n times and returns delays in order of completion.
+    """Spawn task_wait_random n times with max_delay concurrently.
 
     Args:
-        n (int): number of times to run task_wait_random
-        max_delay (int): max delay passed to each task
+        n (int): Number of tasks to run
+        max_delay (int): Max delay for each task
 
     Returns:
-        List[float]: list of delays in ascending order of completion
+        List[float]: List of delays in ascending order of completion
     """
     tasks = [task_wait_random(max_delay) for _ in range(n)]
     delays = []
