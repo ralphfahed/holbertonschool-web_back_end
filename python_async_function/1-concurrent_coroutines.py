@@ -6,7 +6,7 @@ based on completion time.
 
 import asyncio
 from typing import List
-from basic_async_syntax import wait_random  # Make sure file is renamed
+from 0-basic_async_syntax import wait_random  # Make sure file is renamed
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """Spawn wait_random n times with max_delay.
