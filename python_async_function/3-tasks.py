@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
-"""This module defines a function that returns an asyncio.Task
-to run wait_random concurrently.
+"""
+Tasks module that creates asyncio.Task from wait_random coroutine
 """
 
 
 import asyncio
-from typing import Callable
-from basic_async_syntax import wait_random
+
+
+wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 def task_wait_random(max_delay: int) -> asyncio.Task:
-    """Return an asyncio.Task that will run wait_random with max_delay.
-
-    Args:
-        max_delay (int): The maximum delay to pass to wait_random.
-
-    Returns:
-        asyncio.Task: The Task object running wait_random.
+    """
+    Regular function that takes an integer max_delay and returns a asyncio.Task.
     """
     return asyncio.create_task(wait_random(max_delay))
