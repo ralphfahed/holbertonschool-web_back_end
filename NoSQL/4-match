@@ -1,0 +1,6 @@
+// MongoDB shell script to list all documents with name="Holberton school" in the collection school
+// Usage: mongo my_db < 4-match
+// or: cat 4-match | mongo my_db
+
+db.school.find({ name: "Holberton school" }).forEach(printjson)
+quit()
