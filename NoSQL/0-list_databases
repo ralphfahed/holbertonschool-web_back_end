@@ -1,1 +1,6 @@
+// MongoDB shell script to list all databases
+// Usage: mongo < 0-list_databases
+// or: cat 0-list_databases | mongo
+
 show dbs
+quit()
