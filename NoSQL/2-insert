@@ -1,0 +1,6 @@
+// MongoDB shell script to insert a document in the collection school
+// Usage: mongo my_db < 2-insert
+// or: cat 2-insert | mongo my_db
+
+db.school.insert({"name": "Holberton school"})
+quit()
