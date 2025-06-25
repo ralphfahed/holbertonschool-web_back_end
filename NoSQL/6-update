@@ -1,0 +1,10 @@
+// MongoDB shell script to add an "address" attribute to all documents with name "Holberton school" in collection school
+// Usage: mongo my_db < 6-update
+// or: cat 6-update | mongo my_db
+
+db.school.update(
+  { name: "Holberton school" },
+  { $set: { address: "972 Mission street" } },
+  { multi: true }
+)
+quit()
