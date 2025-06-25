@@ -1,0 +1,6 @@
+// MongoDB shell script to list all documents in the collection school
+// Usage: mongo my_db < 3-all
+// or: cat 3-all | mongo my_db
+
+db.school.find().forEach(printjson)
+quit()
