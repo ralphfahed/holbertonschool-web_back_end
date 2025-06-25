@@ -1,6 +1,6 @@
-// MongoDB shell script to count documents in collection school
+// MongoDB shell script to count documents in the collection school
 // Usage: mongo my_db < 5-count
 // or: cat 5-count | mongo my_db
 
-print(db.school.countDocuments())
+db.school.count()
 quit()
