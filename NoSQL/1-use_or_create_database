@@ -1,1 +1,6 @@
+// MongoDB shell script to use or create database my_db
+// Usage: mongo < 1-use_or_create_database
+// or: cat 1-use_or_create_database | mongo
+
 use my_db
+quit()
