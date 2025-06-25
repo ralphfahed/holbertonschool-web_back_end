@@ -1,0 +1,6 @@
+// MongoDB shell script to delete all documents with name "Holberton school" in the collection school
+// Usage: mongo my_db < 7-delete
+// or: cat 7-delete | mongo my_db
+
+db.school.deleteMany({ name: "Holberton school" })
+quit()
