@@ -1,11 +1,17 @@
-process.stdout.write("Welcome to Holberton School, what is your name?\n");
+const readline = require('readline');
 
-process.stdin.on("data", (data) => {
-  const name = data.toString().trim();
+// Create interface to read input from stdin
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// Prompt the user
+rl.question('Welcome to Holberton School, what is your name?\n', (name) => {
   console.log(`Your name is: ${name}`);
 });
 
-// When user ends input (Ctrl+D or piped input), trigger this
-process.stdin.on("end", () => {
-  console.log("This important software is now closing");
+// When the input ends (e.g. Ctrl+D or piping input)
+rl.on('close', () => {
+  console.log('This important software is now closing');
 });
